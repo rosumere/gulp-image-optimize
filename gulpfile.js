@@ -11,14 +11,14 @@ function clean() {
 exports.clean = clean;
 
 function webpOptimize() {
-  return gulp.src('src/*')
+  return gulp.src('src/**/*')
     .pipe(webp())
     .pipe(gulp.dest('build/'));
 }
 exports.webpOptimize = webpOptimize;
 
 function imgOptimize() {
-  return gulp.src('src/*')
+  return gulp.src('src/**/*')
     .pipe(imagemin([
       imgCompress({
         loops: 4,
