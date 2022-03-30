@@ -11,7 +11,7 @@
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-imagemin": "~7.1.0",
     "gulp-webp": "^4.0.1",
     "imagemin-jpeg-recompress": "^7.0.0"
   }
