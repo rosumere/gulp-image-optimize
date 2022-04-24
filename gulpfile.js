@@ -15,7 +15,7 @@ function webpOptimize() {
     .pipe(webp())
     .pipe(gulp.dest('build/'));
 }
-exports.webpOptimize = webpOptimize;
+exports.webpOptimize = series(clean, webpOptimize);
 
 function imgOptimize() {
   return gulp.src('src/**/*')
@@ -32,6 +32,6 @@ function imgOptimize() {
     ]))
     .pipe(gulp.dest('build/'));
 }
-exports.imgOptimize = imgOptimize;
+exports.imgOptimize = series(clean, imgOptimize);
 
 exports.default = series(clean, parallel(webpOptimize, imgOptimize));
